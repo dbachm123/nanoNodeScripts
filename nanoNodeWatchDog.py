@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+# Run this via cron, e.g. with the following entry in crontab:
+# # m h  dom mon dow   command
+# */1 * * * * /etc/cron.hourly/nanoNodeWatchDog.py
+
 import requests
 from subprocess import call
 import datetime
@@ -8,9 +12,6 @@ import os
 import sys
 import re
 from datetime import datetime, timedelta
-
-
-
 
 # test RPC
 def testRPC(ip, port, logFile):
@@ -58,7 +59,6 @@ def testVoting(ip, port, latestNodeLog, logFile):
 							return False;
 				break
 	return True
-	
 
 # log
 def log(message, logFile):
@@ -68,7 +68,6 @@ def log(message, logFile):
 
 # check whether node is alive
 def nodeAlive(ip, port, latestNodeLog, logFile):
-	
 	# run all tests
 	ret = True;
 	ret = ret & testRPC(ip, port, logFile);
@@ -78,11 +77,9 @@ def nodeAlive(ip, port, latestNodeLog, logFile):
 
 # find latest file in directory
 def findLatestFileInDir(dir):
-	
 	list_of_files = glob.glob(dir+'/*.log') 
 	latest_file = max(list_of_files, key=os.path.getctime)
 	return latest_file
-	
 
 # restart node
 def restartNode(startScript, logFile):
@@ -107,9 +104,8 @@ def main():
 	# check node running
 	nodeRunning = nodeAlive(nodeIP, nodePort, latestNodeLog, logFile)
 
-	if not nodeRunning:		
+	if not nodeRunning:
 		restartNode(startScript, logFile)
-
 
 
 if __name__ == "__main__":
