@@ -29,7 +29,7 @@ def testRPC(ip, port, logFile):
 def testVoting(ip, port, latestNodeLog, logFile):
 
 	# maximum allowed time in seconds since last vote
-	maxSecondsSinceLastVote = 5 * 60; # 5 minutes
+	maxSecondsSinceLastVote = 3 * 60; # 3 minutes
 
 	# check for the timestamp of the following message in the log
 	msgInLog = "was confirmed to peers";
