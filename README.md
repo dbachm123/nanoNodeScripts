@@ -23,6 +23,15 @@ nodeLogDir = "/home/rai/RaiBlocks/log" # the log directory of the Nano node
 ```
 Also, have a look at `startRaiNode.sh` and `stopRaiNode.sh` which you will have to adapt as well in terms of paths. 
 
+# Log File
+The log file of `nanoNodeWatchDog.py` will look as follows:
+
+``` 
+2018-04-18 11:09:07.806252 ::: RPC not available
+2018-04-18 11:09:07.814590 ::: Restarting node
+2018-04-18 11:25:03.086756 ::: Last vote was 501.716614 seconds ago
+2018-04-18 11:25:03.094466 ::: Restarting node
+```
 
 # Contribute
 
