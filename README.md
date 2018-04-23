@@ -3,7 +3,7 @@ Some helper scripts to start, stop and watch a Nano node. Run this as a [cronjob
 
 ``` 
 # m h  dom mon dow   command
-*/2 *  * * * /etc/cron.hourly/nanoNodeWatchDog.py
+*/2 *  * * * /home/rai/cron/nanoNodeWatchDog.py
 ``` 
 
 You will have to edit some variables in the `main()` function of `nanoNodeWatchDog.py` and adapt them to your local Nano node setup: 
@@ -20,7 +20,9 @@ nodeLogDir = "/home/rai/RaiBlocks/log" # the log directory of the Nano node
 Also, have a look at `startRaiNode.sh` and `stopRaiNode.sh` which you will have to adapt as well in terms of paths. 
 
 
+# Contribute
 
+My rep node and donations: xrb_1f56swb9qtpy3yoxiscq9799nerek153w43yjc9atoaeg3e91cc9zfr89ehj (http://138.197.179.164/)
 
 
 
