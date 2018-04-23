@@ -22,7 +22,8 @@ Also, have a look at `startRaiNode.sh` and `stopRaiNode.sh` which you will have 
 
 # Contribute
 
-My rep node and donations: xrb_1f56swb9qtpy3yoxiscq9799nerek153w43yjc9atoaeg3e91cc9zfr89ehj (http://138.197.179.164/)
+Feel free to send an [issue](https://github.com/dbachm123/nanoNodeScripts/issues) or a pull request. 
+My rep node and donations: *xrb_1f56swb9qtpy3yoxiscq9799nerek153w43yjc9atoaeg3e91cc9zfr89ehj* (http://138.197.179.164/)
 
 
 
