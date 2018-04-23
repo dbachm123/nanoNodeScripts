@@ -1,5 +1,9 @@
-# nanoNodeScripts
-Some helper scripts to start, stop and watch a Nano node. Run this as a [cronjob](https://help.ubuntu.com/community/CronHowto), e.g. add the following to your crontab. 
+# Overview
+This repository containts some helper scripts to start, stop and watch a Nano node. The main script is the watchdog script `nanoNodeWatchDog.py` which will check whether the RPC interface of the underlying Nano node is available and when the last vote of the node on the Nano network has occured. The latter is done by parsing the node's log files. The watchdog script itself will create a log file if an issue with the Nano node is detected and restart the node automatically. 
+
+# Setup
+
+`nanoNodeWatchDog.py` is designed to be run as a [cronjob](https://help.ubuntu.com/community/CronHowto), e.g. by adding the following to your crontab (of course, you can run it manually from a terminal first, to check if it is working correctly):
 
 ``` 
 # m h  dom mon dow   command
