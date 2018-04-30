@@ -12,6 +12,7 @@ import os
 import sys
 import re
 from datetime import datetime, timedelta
+from os.path import expanduser
 
 # test whether RPC is responsive
 def testRPC(ip, port, logFile):
@@ -85,13 +86,16 @@ def restartNode(startScript, logFile):
 
 # main
 def main():
+
+    home = expanduser("~")
+
     # --------------------------------------------------
     # some variables - adapt these to your local node setup
     nodeIP = '[::1]' # node's local IP
     nodePort = '7076' # RPC port
-    startScript = "/home/rai/startRaiNode.sh" # script to (re)-start Nano node
-    logFile = "/home/rai/nanoNode.log" # log file for this script 
-    nodeLogDir = "/home/rai/RaiBlocks/log" # the log directory of the Nano node
+    startScript = "{}/startRaiNode.sh".format(home) # script to (re)-start Nano node
+    logFile = "{}/nanoNode.log".format(home)  # log file for this script 
+    nodeLogDir = "{}/RaiBlocks/log".format(home)  # the log directory of the Nano node
     # --------------------------------------------------
 
     # find latest log file in the node's log dir
