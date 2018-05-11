@@ -25,19 +25,20 @@ def testRPC(ip, port, logFile):
         log("RPC not available", logFile)
         return False
 
-# test when the latest vote occured 
+# test when the latest vote occured
 def testVoting(ip, port, latestNodeLog, logFile):
     # maximum allowed time in seconds since last vote
     maxSecondsSinceLastVote = 5 * 60; # 5 minutes
 
     # check for the timestamp of the following message in the log
-    msgInLog = "was confirmed to peers";
+    msgInLog1 = "was confirmed to peers";
+    msgInLog2 = "was republished to peers";
 
     # read file line by line; start at the back
     with open(latestNodeLog) as fp:
         cnt = 0
         for line in reversed(list(fp)):
-            if msgInLog in line:
+            if msgInLog1 in line or msgInLog2 in line:
                 # found a line --> extract time stamp
                 # line is something like:
                 # [[2018-04-13 08:37:48.001414]: Block D84B7B...  was confirmed to peers
