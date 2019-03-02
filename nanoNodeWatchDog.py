@@ -96,7 +96,7 @@ def main():
     nodePort = '7076' # RPC port
     startScript = "{}/startRaiNode.sh".format(home) # script to (re)-start Nano node
     logFile = "{}/nanoNode.log".format(home)  # log file for this script 
-    nodeLogDir = "{}/RaiBlocks/log".format(home)  # the log directory of the Nano node
+    nodeLogDir = "{}/Nano/log".format(home)  # the log directory of the Nano node
     # --------------------------------------------------
 
     # find latest log file in the node's log dir
