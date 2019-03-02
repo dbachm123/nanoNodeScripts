@@ -31,7 +31,7 @@ def testVoting(ip, port, latestNodeLog, logFile):
     maxSecondsSinceLastVote = 5 * 60; # 5 minutes
 
     # check for the timestamp of the following message in the log
-    msgInLog1 = "was confirmed to peers";
+    msgInLog1 = "Broadcasting confirm req for";
     msgInLog2 = "was republished to peers";
 
     # read file line by line; start at the back
